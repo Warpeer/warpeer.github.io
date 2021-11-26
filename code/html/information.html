@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/code/css/master.css">
+    <link rel="stylesheet" href="/code/css/information.css">
+    <link rel="shortcut icon" href="/img/webIcon.png">
+    <title>Information</title>
+</head>
+
+<body>
+    <a name="top"></a>
+    <div class="subBackground">
+        <!--Div classes and links for the nav bar -->
+        <nav class="nav-bar">
+            <nav class="nav-links">
+                <!-- Hyperlinks that direct to another page on the website -->
+                <ul>
+                    <li>
+                        <a href="../../index.html"><strong>WELCOME</strong></a>
+                        <a href="reflection.html"><strong>REFLECTION</strong></a>
+                        <a id="currentPage" href="information.html"><strong>INFORMATION</strong></a>
+                        <a href="accessibility.html"><strong>ACCESSIBILITY</strong></a>
+                        <a href="fun.html"><strong>FUN</strong></a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+        <h1 class="title">INFORMATION</h1>
+        <!-- Section that contains the different cards within the content container -->
+        <section class="container-content">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-image card-1" title="Thinking person"></div>
+                <h2>Universal Design</h2>
+                <p class="summary contentText">
+                    The principles of universal design include social equality, human diversity, usability, accessibility, and participatory processes. It is after all a designers responibility to implement universal design in their projects.
+                </p>
+                <button class="readMoreButton">READ MORE</button>
+                <div class="expandable">
+                    <p class="contentText">
+                        All these forms of universal design have one thing in common. To ensure that everyone no matter race, sexuality, country of origin, religion, or political opinion can use technology on an even basis that benefits everyone, without the need for add-ons
+                        or special solutions. Read more about it <a href="https://www.rickhansen.com/news-stories/blog/universal-design-101">here.</a>
+                        <br>
+                        <br> Despite this, it is impossible to create a “one size fits all” solution to this problem, and we should rather focus on developing specific solutions for specific problems.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-image card-2" title="Party people"></div>
+                <h2>Aspects</h2>
+                <p class="summary contentText">
+                    One of the most important aspects of universal design is accessibility and usability. A good example of this would be the smartphone and its ability to adapt to a blind user with its text to speech feature.
+                </p>
+                <button class="readMoreButton">READ MORE</button>
+                <div class="expandable">
+                    <p class="contentText">
+                        Let’s imagine that a blind user wants to travel from one position to another. To make the blind user succeed in their task, the smartphone must reach the requirements of universal design. If we emphasize accessibility and usability, it is important that
+                        the blind user can operate a navigation app like anybody else. To fulfill this, it is crucial that a text-to-speech feature is being put into practice in the future development of the app. If you want to learn more about everyday
+                        solutions for universal design, head over to <a href="https://universaldesign.ie/what-is-universal-design/">this</a> site.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-image card-3" title="Tech guy"></div>
+                <h2>Example</h2>
+                <p class="summary contentText">
+                    The concept of universal design may sound quite simple, but in reality, it’s very challenging to achieve. Places and products that are universally designed are all around us and are often overlooked.
+                </p>
+                <button class="readMoreButton">READ MORE</button>
+                <div class="expandable">
+                    <p class="contentText">
+                        You have used a universally designed product before. One of the most common examples of universal design is automatic doors. You can find these everywhere, most commonly at the entrance of shopping malls and grocery stores.
+                        <br>
+                        <br> This invention makes life easier for people in wheelchairs and for people who are carrying for example grocery bags in both hads. Read <a href="https://www.umassd.edu/dss/resources/faculty-staff/universal-design/">here</a>                        for more information of the topic.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="backToTop" onclick="location.href='#top';" style="cursor: pointer;">
+            <a href="#top">Back to top</a>
+        </div>
+    </div>
+    <footer>
+        <div>group99@broglesociety.com</div>
+        <div>group99 all rights reserved &copy;</div>
+        <div>Phone: +47 999 555 22</div>
+    </footer>
+</body>
+
+</html>
+
+<!-- JavaScript in order to open and close the collapsibles -->
+<script>
+    var collumn = document.getElementsByClassName("readMoreButton");
+    var j;
+    for (j = 0; j < collumn.length; j++) {
+        collumn[j].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    background: #001220;
+    overflow: hidden;
+}
+
+#backroundVideo {
+    position: fixed;
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    size: auto;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 20%;
+    z-index: -1;
+}
+
+
+/* CSS properties for the main heading of the front page */
+
+.main-header {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    color: transparent;
+    background: url(/img/animation3.png);
+    /* We did some research on if there were any other ways of placing the image withing the text without
+    using -webkit- since in CSS validators it comes up as an error. It suggests the "standard property"
+    of just "background-clip" but that did not seem to work for us. So we decided to keep the -webkit-  */
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: background-animation 10s linear infinite;
+}
+
+@keyframes background-animation {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+#pauseButton {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 200px;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: transparent;
+    color: #fbae3c;
+    cursor: pointer;
+}
+
+#pauseButton:hover {
+    background: #fbae3c;
+    color: black;
+}
+
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 20px;
+    }
+}

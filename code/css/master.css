@@ -1,0 +1,194 @@
+ html {
+     background: #00223b;
+ }
+ /* CSS properties for the nav bar */
+ 
+ .nav-bar {
+     display: flex;
+ }
+ 
+ .nav-links {
+     flex: 1;
+     text-align: center;
+ }
+ 
+ .nav-links ul li {
+     list-style: none;
+     display: inline-block;
+     padding: 40px 15px;
+ }
+ 
+ .nav-links ul a {
+     color: white;
+     text-transform: uppercase;
+     font-size: 18px;
+     padding: 8px;
+     text-decoration: none;
+     transition: all 0.3s ease 0s;
+ }
+ 
+ .nav-links ul a:hover {
+     color: transparent;
+     text-shadow: 0px 8px 0px white;
+     text-decoration: solid;
+     color: transparent;
+ }
+ /*ID TO SET THE CURRENT PAGE: USED FOR NAVBAR*/
+ 
+ #currentPage {
+     text-shadow: 0px 0px 0px #fbae3c;
+     color: transparent;
+     text-decoration: underline;
+ }
+ /*CSS PROPERTIES FOR THE FOOTER*/
+ 
+ footer {
+     display: flex;
+     flex: 1;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+     background: rgb(0, 25, 44);
+     background: linear-gradient(0deg, rgba(0, 25, 44, 1) 0%, rgba(0, 46, 80, 1) 100%);
+     color: gray;
+     width: 70%;
+     margin-left: 15%;
+     margin-top: 100px;
+     height: fit-content;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     border-radius: 10px 10px 0 0;
+     box-shadow: 0 2px 16px 0 #00111f, 0 3px 40px 0 #00111f;
+     flex-wrap: wrap;
+ }
+ /*CSS PROPERTIES FOR THE SUB BACKGROUND*/
+ 
+ .subBackground {
+     background: rgb(0, 18, 32);
+     background: radial-gradient(circle, rgba(0, 18, 32, 1) 0%, rgba(3, 30, 51, 1) 77%, rgba(8, 41, 66, 1) 100%);
+     width: 70%;
+     margin-left: 15%;
+     height: fit-content;
+     border-radius: 10px;
+     padding-top: 5px;
+     padding-bottom: 50px;
+     box-shadow: 0 2px 16px 0 #00111f, 0 3px 40px 0 #00111f;
+ }
+ 
+ .backToTop {
+     width: fit-content;
+     height: fit-content;
+     padding: 10px;
+     margin: auto;
+     margin-top: 20px;
+     background-color: white;
+     color: #00111f;
+     font-weight: bold;
+     text-align: center;
+     border-radius: 10px;
+     text-decoration: none;
+ }
+ 
+ .backToTop:hover {
+     background-color: #fbae3c;
+ }
+ /*---------------------------------TEXT MODIFIERS---------------------------------*/
+ 
+ .contentText {
+     line-height: 1.5;
+ }
+ /*SUMMARY IS USED FOR THE DIFFERENT CARDS*/
+ 
+ .summary {
+     padding: 15px;
+     padding-left: 30px;
+     padding-right: 30px;
+     text-align: left;
+     color: #001220;
+ }
+ 
+ h2 {
+     text-align: left;
+     color: #001220;
+     text-transform: uppercase;
+ }
+ 
+ .box-container h2 {
+     padding-bottom: 15px;
+ }
+ 
+ .card h2 {
+     padding: 15px;
+     padding-left: 30px;
+     padding-right: 30px;
+     margin-top: 20px;
+ }
+ 
+ a {
+     text-decoration: none;
+     color: #001220;
+ }
+ /*CREATES THE TITLE OF EACH WEBPAGE*/
+ 
+ .title {
+     text-align: center;
+     margin: 30px;
+     font-size: 40px;
+     font-weight: bold;
+     text-transform: uppercase;
+     color: transparent;
+     background: url(/img/animation3.png);
+     /* We did some research on if there were any other ways of placing the image withing the text without
+    using -webkit- since in CSS validators it comes up as an error. It suggests the "standard property"
+    of just "background-clip" but that did not seem to work for us. So we decided to keep the -webkit-  */
+     -webkit-background-clip: text;
+     background-position: 0 0;
+     animation: background-animation 10s linear infinite;
+ }
+ /*ANIMATES THE TITLE*/
+ 
+ @keyframes background-animation {
+     100% {
+         background-position: 2000px 0;
+     }
+ }
+ /*CHANGES THE NAVBAR TO FIT SMALLER SCREEN DIMENSIONS*/
+ 
+ @media (max-width: 850px) {
+     .container h1 {
+         font-size: 26px;
+         margin-bottom: 10%;
+     }
+     .contentText {
+         line-height: 1.75;
+         font-size: 110%;
+     }
+     .nav-links ul li {
+         display: inline-block;
+         list-style-type: none;
+         padding: 8px 12px;
+     }
+     .nav-links ul {
+         text-align: center;
+         padding: 20px 5px;
+     }
+     .nav-links {
+         margin-top: 20px;
+         line-height: 1.5;
+     }
+     .nav-links ul li a {
+         font-size: 11px;
+     }
+     .text-animation {
+         width: fit-content;
+         text-align: center;
+         font-size: 20px;
+         top: 20%;
+         left: 35%;
+         transform: translate(-20%, -35%);
+         position: absolute;
+     }
+     .title {
+         font-size: 35px;
+     }
+ }

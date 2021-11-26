@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/code/css/master.css">
+    <link rel="stylesheet" href="/code/css/accessibility.css">
+    <link rel="shortcut icon" href="/img/webIcon.png">
+    <title>Accessibility</title>
+</head>
+
+<!--Div classes and links for the nav bar -->
+
+<body>
+    <a name="top"></a>
+    <div class="subBackground">
+        <nav class="nav-bar">
+            <nav class="nav-links">
+                <!-- Hyperlinks that direct to another page on the website -->
+                <ul>
+                    <li>
+                        <a href="../../index.html"><strong>WELCOME</strong></a>
+                        <a href="reflection.html"><strong>REFLECTION</strong></a>
+                        <a href="information.html"><strong>INFORMATION</strong></a>
+                        <a id="currentPage" href="accessibility.html"><strong>ACCESSIBILITY</strong></a>
+                        <a href="fun.html"><strong>FUN</strong></a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+        <h1 class="title">Accessibility</h1>
+        <!-- Section that contains the different cards within the content container -->
+        <section class="container-content">
+            <!-- Introduction Card -->
+            <div class="card">
+                <h2>Introduction & color scheme</h2>
+                <p class="summary contentText">
+                    It is essential to create a website that everyone can use despite disabilities. There are various ways to test if the site meets some WGAC 2.1 requirements. We’ve concluded to use an automated test and manual tests. In this section of our webpage, we
+                    will go through how we tested the page, made changes and ensured it was more accessible.
+                </p>
+                <button class="readMoreButton">READ MORE</button>
+                <div class="expandable">
+                    <h3>Color scheme</h3>
+                    <p class="contentText">
+                        For the color scheme, we researched what colors most people can see. After some research we found that yellow/orange together with blue is a good color scheme because it is visible, and few people have blue – yellow colorblindness. We also wanted the
+                        colors to not be too bright and matte. Here are our sorces:
+                        <br>
+                        <br>
+                        <a href="https://sciencing.com/common-eye-color-7192584.html " target=”_blank”>What Are the Most Visible Colors From a Distance?</a>
+                        <br>
+                        <br>
+                        <a href="https://www.allaboutvision.com/conditions/color-blindness/types-of-color-blindness/" target=”_blank”>What are the different types of color blindness?</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Testing Card -->
+            <div class="card">
+                <h2>Automated test</h2>
+                <p class="summary contentText">
+                    For our automated test we used Webaim’s WAVE accessibility checker. This gives us a short summary of each page, as well a detailed section for each element like contrast, alerts, or warnings. When conducting this test, it’s important to keep in mind that
+                    the results of the automated test may not be the optimal solution.
+                </p>
+                <button class="readMoreButton">READ MORE</button>
+                <div class="expandable">
+
+                    <div class="box-container">
+                        <div class="box-text">
+                            <h3>Wrong headings</h3>
+                            <p class="contentText">
+                                We got zero errors on all of our pages. One of them included using the wrong heading for the title as seen on the picture to the left. The other alert stacks onto the other one, so fixing the first would fix the other one. Instead of using the &lt;p class=”title”&gt;
+                                we should’ve used &lt;h1 class=”title”&gt; instead.
+                            </p>
+                        </div>
+                        <div class="box-wrong-heading" title="Heading fix"></div>
+                    </div>
+
+                    <div class="box-container">
+                        <div class="box-btt" title="Back to top button fix"></div>
+                        <div class="box-text">
+                            <h3>Back-to-the-top button</h3>
+                            <p class="contentText">
+                                One alert that showed up throughout the whole site was “back to the top” button. This is due to it not being clickable with a keyboard. We have later fixed this by making the text inside the div-button clickable.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="box-container">
+                        <div class="box-text">
+                            <h3>Color contrast errors</h3>
+                            <p class="contentText">
+                                The only contrast error we faced, was on each of the collapsible buttons. On hover, the background color was turned to bright orange, and the foreground color to dark blue. However, the unicode character is white. We’ve fixed this later on by changing
+                                the color of the button content element to the foreground color.
+                            </p>
+                        </div>
+                        <div class="box-contrast" title="Contrast fix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conclusion Card -->
+            <div class="card">
+                <h2>Manual testing & conclusion</h2>
+                <p class="summary contentText">
+                    In addition to testing accessibility on Webiams website, we also did a multiple of tests manually on our own. Some of the aspects we wanted to test manually was the ability for blind, motor functional disability, and epileptic users to use our website.
+                </p>
+                <button class="readMoreButton">READ MORE</button>
+                <div class="expandable">
+                    <div class="box-container">
+                        <div class="box-text">
+                            <h3>Manual test</h3>
+                            <p class="contentText">
+                                To check if the website was maneuverable by people with reduced motor functions was use the “tab” and “shift + tab” buttons on the keyboard. This worked well, you can move between the different pages and modify the collapsibles on the page.
+                                <br>
+                                <br> The test we used to check if the website had options for blind users was by downloading a text-to-speech extension to Google chrome. This worked verry well on the main content of the page, except the h1 on the “Welcome”
+                                page, as well as the nav bar. We could not figure out a reason for this, and the only solution we could find was to add a separate button to the page that would have required a lot of JavaScript.
+                                <br>
+                                <br>Since we have a video as a background on the front page, we also added a play/pause button to comfort epileptic users.
+                            </p>
+                        </div>
+                        <div class="box-mt" title="Text to speech test"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="backToTop" onclick="location.href='#top';" style="cursor: pointer;">
+            <a href="#top">Back to top</a>
+        </div>
+    </div>
+    <footer>
+        <div>group99@broglesociety.com</div>
+        <div>group99 all rights reserved &copy;</div>
+        <div>Phone: +47 999 555 22</div>
+    </footer>
+    <!-- JavaScript in order to open and close the collapsibles -->
+    <script>
+        var collumn = document.getElementsByClassName("readMoreButton");
+        var j;
+        for (j = 0; j < collumn.length; j++) {
+            collumn[j].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

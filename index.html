@@ -1,0 +1,67 @@
+<!--All videos and images used in this project are gathered from https://www.pexels.com -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/code/css/master.css">
+    <link rel="stylesheet" href="/code/css/index.css">
+    <link rel="shortcut icon" href="/img/webIcon.png">
+    <title>Welcome!</title>
+</head>
+
+<!--Div classes and links for the nav bar -->
+<nav class="nav-bar">
+    <nav class="nav-links">
+        <!-- Hyperlinks that direct to another page on the website -->
+        <ul>
+            <li>
+                <a id="currentPage" href="index.html"><strong>WELCOME</strong></a>
+                <a href="/code/html/reflection.html"><strong>REFLECTION</strong></a>
+                <a href="/code/html/information.html"><strong>INFORMATION</strong></a>
+                <a href="/code/html/accessibility.html"><strong>ACCESSIBILITY</strong></a>
+                <a href="/code/html/fun.html"><strong>FUN</strong></a>
+            </li>
+        </ul>
+    </nav>
+</nav>
+
+<!-- Main content of the front page -->
+
+<body>
+    <!--Backround video -->
+    <video autoplay muted loop id="backroundVideo">
+    <source src="/mov/videoBackround.mp4" alt="Background video" type="video/mp4">
+  </video>
+    <!-- Main header -->
+    <div class="main-header">
+        <h1>
+            WELCOME TO OUR PAGE! <br />WE ARE FIRST YEAR STUDENTS <br />STUDYING APPLIED COMPUTER SIENCE <br />AT OSLOMET
+        </h1>
+    </div>
+    <!-- Button for pausing backround-->
+    <button id="pauseButton" onclick="Pause()">Pause backround</button>
+</body>
+
+</html>
+
+<!-- JavaScript in order to pause the background video -->
+<!-- This is to ensure that the website is accessable to people with for example epilepsy -->
+<!-- We learned these lines of javascript from https://www.w3schools.com -->
+<script>
+    var video = document.getElementById("backroundVideo");
+    var btn = document.getElementById("pauseButton");
+
+    function Pause() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause backround";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play backround";
+        }
+    }
+</script>

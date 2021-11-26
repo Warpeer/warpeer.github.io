@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    background: #000000;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+/*Backround video*/
+
+#backroundVideo {
+    position: fixed;
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    size: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+/*Pause button for backround video*/
+
+#pauseButton {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 200px;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: transparent;
+    color: rgb(43, 255, 0);
+    cursor: pointer;
+}
+
+#pauseButton:hover {
+    background: rgb(43, 255, 0);
+    color: black;
+}
+
+
+/*Nav bar effects*/
+
+.nav-links ul a:hover {
+    text-shadow: 1px 1px 20px rgb(51, 255, 0), 1px 1px 10px rgb(43, 255, 0);
+    text-decoration: solid;
+    font-size: 30px;
+    color: transparent;
+    background: url(/img/alienText.png);
+    /* We did some research on if there were any other ways of placing the image withing the text without
+    using -webkit- since in CSS validators it comes up as an error. It suggests the "standard property"
+    of just "background-clip" but that did not seem to work for us. So we decided to keep the -webkit-  */
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: background-animation 5s linear infinite;
+}
+
+#currentPage {
+    text-shadow: 0px 0px 0px rgb(43, 255, 0);
+    color: transparent;
+    text-decoration: underline;
+}
+
+@keyframes background-animation {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .nav-links ul a:hover {
+        font-size: 11px;
+    }
+}
+
+
+/*Animated typewriter text that displays "You are not alone <3"*/
+
+.text {
+    position: absolute;
+    top: 40%;
+    left: 42%;
+    border-right: 2px solid rgb(43, 255, 0);
+    color: rgb(43, 255, 0);
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.writing-animation {
+    animation: writing-animation 4s steps(50) 3.5s normal both, text-cursor-animation 500ms steps(50) infinite normal;
+}
+
+@keyframes writing-animation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 9.3em;
+    }
+}
+
+@keyframes text-cursor-animation {
+    from {
+        border-right-color: rgb(43, 255, 0);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+/* Alien image interaction*/
+
+img {
+    position: absolute;
+    width: 20%;
+    bottom: -30%;
+    left: 35%;
+}
+
+img:hover {
+    width: 20.5%;
+    bottom: 0;
+    filter: drop-shadow(0 0 0.75rem rgb(43, 255, 0));
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Shrinks the alien image for smaller screens*/
+
+@media (max-width: 850px) {
+    img {
+        bottom: 0;
+        width: 30%;
+    }
+    img:hover {
+        width: 31%;
+    }
+}
